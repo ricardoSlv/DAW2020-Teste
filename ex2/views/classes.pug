@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  section
+    h1.text-center Classes Nivel 1
+    table.table
+      tr
+        th Codigo
+        th Titulo
+      each c in classes
+        tr
+          td
+            a(href='/classes/c'+c.codigo) #{c.codigo}
+          td #{c.titulo}
+
+

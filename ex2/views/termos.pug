@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  section
+    h1.text-center Termos Indice
+    table.table
+      tr
+        th Termo
+        th Id da classe
+        th Titulo da classe
+      each t in termos
+        tr(id=t.id)
+          td #{t.termo}
+          td
+            a(href='/classes/'+t.codigoClasse) #{t.idClasse}
+          td
+            a(href='/classes/'+t.codigoClasse) #{t.tituloClasse}
+
+

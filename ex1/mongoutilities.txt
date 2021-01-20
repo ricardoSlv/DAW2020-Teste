@@ -1,0 +1,3 @@
+mongoimport --db dawprirec2020 --collection obras --file dataset.json --jsonArray
+
+db.casamentos.find().forEach((cas)=>{ db.casamentos.update(cas, { $set: { "id": cas.ref.split("/").join("_") } }, false, true); });
