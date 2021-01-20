@@ -13,36 +13,39 @@ block content
         th Status
         tr
           td
-            a(href='/tipologias/'+classe.codigo) #{classe.codigo}
+            a(href='/classes/c'+classe.codigo) #{classe.codigo}
           td
             a(href='/classes/c'+classe.pai.codigo) #{classe.pai.codigo}
           td #{classe.nivel}
           td #{classe.titulo}
           td #{classe.descricao}
           td #{classe.status}
-    
-    h1.text-center Descendencia
-    table.table
-      tr
-        th Codigo
-        th Titulo
-        th Id
-        th Status
-        each d in descendencia
-          tr
-            td
-              a(href='/classes/c'+d.codigo) #{d.codigo}
-            td #{d.titulo}
-            td
-              a(href=d.id) #{d.id}
-            td #{d.status}
-    h1.text-center Termos Indice
-    table.table
-      tr
-        th Id
-        th Termo
-        each t in classe.termosInd
-          tr
-            td
-              a(href='/termosIndice#'+t.idTI.split('#')[1]) #{t.idTI.split('#')[1]}
-            td #{t.termo}
+
+    if (descendencia&&descendencia.length > 0)
+      h1.text-center Descendencia
+      table.table
+        tr
+          th Codigo
+          th Titulo
+          th Id
+          th Status
+          each d in descendencia
+            tr
+              td
+                a(href='/classes/c'+d.codigo) #{d.codigo}
+              td #{d.titulo}
+              td
+                a(href=d.id) #{d.id}
+              td #{d.status}
+
+    if (classe.termosInd&&classe.termosInd.length > 0)
+      h1.text-center Termos Indice
+      table.table
+        tr
+          th Id
+          th Termo
+          each t in classe.termosInd
+            tr
+              td
+                a(href='/termosIndice#'+t.idTI.split('#')[1]) #{t.idTI.split('#')[1]}
+              td #{t.termo}
