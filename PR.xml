@@ -2,6 +2,7 @@
 Para ambos exercicios:
 	npm i
 	npm run start
+Ambas aplicações correm no port 3000
 </Funcionamento>
 <Ex1>
 	<1>
@@ -35,7 +36,7 @@ Para ambos exercicios:
 		</o>
 	</1>
 	<2>
-		Adicionei aconras nos termos de indice, parecem estar a funcionar se o acesso no tab do browser for o primeiro, no caso do tab viajar por exemplo entre
+		Adicionei ancoras nos termos de indice, parecem estar a funcionar se o acesso no tab do browser for o primeiro, no caso do tab viajar por exemplo entre
 		termos->classe->termos, no meu caso pelo menos, o Google Chrome tinha a tendencia de tentar preservar o scroll ao inves de respeitar a bookmark.
 	</2>
 </Ex2>

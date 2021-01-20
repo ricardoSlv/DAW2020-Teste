@@ -17,7 +17,6 @@ export async function getBatizados() {
         .find({}, { title: 1, _id: 0 })
         .exec()
 
-    console.log(titles)
     const uniqueNames = new Set()
 
     try {
@@ -31,6 +30,7 @@ export async function getBatizados() {
         console.log(err)
     }
 
+    //Álvaro","Ângela",Ângelo acabam por ficar para último, optei por aceitar a ordem natural para strings
     return [...uniqueNames].sort()
 }
 
@@ -68,7 +68,7 @@ export async function byAno() {
     catch (err) {
         console.log(err)
     }
-
-    return byAno
+    
+    return Object.keys(byAno).map(k=>({ano:k, batizados: byAno[k]}))
 }
 
