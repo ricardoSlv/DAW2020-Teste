@@ -40,7 +40,8 @@ Ambas aplicações correm no port 3000
 		</4>
 	</1>
 	<2>
-		Adicionei ancoras nos termos de indice, parecem estar a funcionar(demora alguns segundos até o browser fazer o scroll) se o acesso no tab do browser for o primeiro, no caso do tab viajar por exemplo entre
-		termos->classe->termos, no meu caso pelo menos, o Google Chrome tinha a tendencia de tentar preservar o scroll ao inves de respeitar a bookmark.
+		Adicionei ancoras nos termos de indice, parecem estar a funcionar(demora alguns segundos até o browser fazer o scroll) se o acesso no tab do browser 
+		for o primeiro, no caso do tab viajar por exemplo entre termos->classe->termos, no meu caso pelo menos, o Google Chrome tinha a tendencia de tentar
+		preservar o estado do scroll anterior ao inves de respeitar a bookmark.
 	</2>
 </Ex2>

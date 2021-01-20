@@ -13,8 +13,6 @@ import mongoose from 'mongoose'
 const mongoDB = 'mongodb://127.0.0.1:27017/dbDawSpec2020'
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
 
-// import indexRouter from './routes/index.js'
-
 const app = express()
 
 app.set('views', join(__dirname, 'views'))
@@ -26,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cookieParser())
 
-app.use(express.static(join(__dirname, 'public')))
+//app.use(express.static(join(__dirname, 'public')))
 
 let token = "Token Missing"
 axios.post('http://clav-api.di.uminho.pt/v2/users/login', {
