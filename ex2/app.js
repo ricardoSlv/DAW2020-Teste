@@ -24,8 +24,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cookieParser())
 
-//app.use(express.static(join(__dirname, 'public')))
-
 let token = "Token Missing"
 axios.post('http://clav-api.di.uminho.pt/v2/users/login', {
     username: "daw2020@teste.uminho.pt",
